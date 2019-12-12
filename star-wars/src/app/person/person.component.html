@@ -1,0 +1,5 @@
+<div [ngStyle]="{backgroundColor : getBackgroundColor(), color : getColor()}">
+  <p>{{ person.name }}</p>
+  <p>{{ person.birth_year }}</p>
+  <p>BMI: {{ person.bmi | number:'.1-1' }}</p>
+</div>

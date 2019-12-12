@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button type="button" class="btn btn-primary" (click)="getData()" *ngIf="!isLoading">
+        Get Data
+      </button>
+      <div class="spinner-grow text-primary" role="status" *ngIf="isLoading">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col" *ngFor="let item of ageGroups">
+      <app-age-group [ageGroup]="item"></app-age-group>
+    </div>
+  </div>
+</div>
